@@ -11306,35 +11306,9 @@ SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/VendingMachines/DA_ItemPo
 # Base Scale of Uniques
 SparkPatchEntry,(1,1,0,),/Game/GameData/Loot/ItemPools/VendingMachines/DA_ItemPool_VendingMachine_CrazyEarl.DA_ItemPool_VendingMachine_CrazyEarl,BalancedItems.BalancedItems[6].Weight.BaseValueScale,0,,3
 
-###
-### Name: Map De-fogger
-### Version: 1.0
-### Author: Novenic
-###
-###	Makes your discovery radius very large, so the entire map is uncovered upon visiting a location
-###
 
-SparkPatchEntry,(1,1,0,),/Game/GameData/ZoneMap/ZoneMapGlobals.ZoneMapGlobals,PlayerUnfogRadius,0,,999999999999.9
-SparkPatchEntry,(1,1,0,),/Game/GameData/ZoneMap/ZoneMapGlobals.ZoneMapGlobals,VehicleUnfogRadius,0,,999999999999.9
-SparkPatchEntry,(1,1,0,),/Game/GameData/ZoneMap/ZoneMapGlobals.ZoneMapGlobals,DefaultUnfogHeight,0,,999999999999.9
-SparkPatchEntry,(1,1,0,),/Game/GameData/ZoneMap/ZoneMapGlobals.ZoneMapGlobals,DefaultVehicleUnfogHeight,0,,999999999999.9
 
-# Fix Polyamorous' secondary fire not receiving damage bonuses.
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/EventVDay/Gear/Weapon/_Unique/PolyAim/Parts/Part_SM_MAL_Barrel_01_PolyAim.Part_SM_MAL_Barrel_01_PolyAim,InventoryAttributeEffects,0,,()
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/EventVDay/Gear/Weapon/_Unique/PolyAim/Parts/Part_SM_MAL_Barrel_01_PolyAim.Part_SM_MAL_Barrel_01_PolyAim,WeaponUseModeAttributeEffects.WeaponUseModeAttributeEffects,0,,((UseMode=(EWeaponUseMode=EWeaponUseMode_MAX),UseModeBitmask=3,AttributeEffects=((AttributeToModify=/Game/GameData/Weapons/Att_Weapon_Damage.Att_Weapon_Damage,ModifierType=ScaleSimple,ModifierValue=(BaseValueConstant=0,DataTableValue=(DataTable=/Game/PatchDLC/EventVDay/Gear/Weapon/DataTable_WeaponBalance_EventVDay.DataTable_WeaponBalance_EventVDay,RowName=PolyAim,ValueName=DamageScale_2_4F6EF14648BA8F2AE9217DAFEA60EE53),BaseValueScale=1)),(AttributeToModify=/Game/GameData/Weapons/Game/Gear/Weapons/_Shared/_Design/WeaponAttributes/Att_BarrelType.Att_BarrelType,ModifierType=OverrideBaseValue,ModifierValue=(BaseValueConstant=3,BaseValueScale=1)))))
 
-# Shlooter - Make it always spawn with three passive stat bonuses.
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/VaultCard2/Gear/Artifacts/Unique/Shlooter/Balance/PartSet_Artifact_Shlooter.PartSet_Artifact_Shlooter,ActorPartLists.ActorPartLists[4].MultiplePartSelectionRange.Min,0,,3
 
-# Anointment Re-roll Cost lowered to 150 Eridium.
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Gear/_Shared/_Design/InventoryGlobals.InventoryGlobals,PartReRollCostFormula.BaseValueConstant,0,,150
-
-# Switch the Quadomizer and Duc on the Rampager and Dreg/Rage.
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/Enemies/PrometheaBoss/_Shared/_Design/LootPools/ItemPool_Rampager_Gun.ItemPool_Rampager_Gun,BalancedItems.BalancedItems[0],0,,(InventoryBalanceData=/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/Rampager/Balance/Balance_HW_TOR_Rampager.Balance_HW_TOR_Rampager,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Weapons/HeavyWeapons/Torgue/_Shared/_Design/_Unique/Rampager/Balance/Balance_HW_TOR_Rampager.Balance_HW_TOR_Rampager"',Weight=(BaseValueConstant=1,BaseValueScale=1))
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/Raid1/GameData/Loot/ItemPools/ItemPool_DregAndRage.ItemPool_DregAndRage,BalancedItems.BalancedItems[1],0,,(InventoryBalanceData=/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/TheDuc/Balance/Balance_PS_JAK_TheDuc.Balance_PS_JAK_TheDuc,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Weapons/Pistols/Jakobs/_Shared/_Design/_Unique/TheDuc/Balance/Balance_PS_JAK_TheDuc.Balance_PS_JAK_TheDuc"',Weight=(BaseValueConstant=1,BaseValueScale=1))
-
-# Switch the Messy Breakup and Ten Gallon on GenIVIV and Rax.
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/GameData/Loot/ItemPools/Unique/ItemPool_MessyBreakup_GeneVIV.ItemPool_MessyBreakup_GeneVIV,BalancedItems.BalancedItems[1],0,,(InventoryBalanceData=/Game/Gear/Shields/_Design/_Uniques/MessyBreakup/bALANCE/InvBalD_Shield_MessyBreakup.InvBalD_Shield_MessyBreakup,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Shields/_Design/_Uniques/MessyBreakup/bALANCE/InvBalD_Shield_MessyBreakup.InvBalD_Shield_MessyBreakup"',Weight=(BaseValueConstant=1,BaseValueScale=1))
-SparkLevelPatchEntry,(1,1,0,MatchAll),/Game/PatchDLC/Raid1/GameData/Loot/ItemPools/ItemPool_Rax.ItemPool_Rax,BalancedItems.BalancedItems[0],0,,(InventoryBalanceData=/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TenGallon/Balance/Balance_SM_TED_TenGallon.Balance_SM_TED_TenGallon,ResolvedInventoryBalanceData=InventoryBalanceData'"/Game/Gear/Weapons/SMGs/Tediore/_Shared/_Design/_Unique/TenGallon/Balance/Balance_SM_TED_TenGallon.Balance_SM_TED_TenGallon"',Weight=(BaseValueConstant=1,BaseValueScale=1))
 
 
